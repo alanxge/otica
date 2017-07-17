@@ -1,0 +1,28 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "secret": "efc700eecda67b63e056a886c70e9c26db4272e8894bd676adde3e32e4f9202539c8d20ff1208ccea1d2518eba93b79c7f099996999be2d563180509fd395376863e96632ecd420166d47e52e596758513f34b7cb09316e6c8022e1f42048dab5d04906b3baf251fea2cb2c4c1224de9acbb99d045c4149585c82bb7f08177604cc95302608c63f179bc516b0e5a2e355572d22258609f1ff279981f49a343915389ce9fcb8b513fbfe2a6979773da3327ec2c532bec73f40cb17ad4366f8432c5c418c386c34647769b3ef49b7da00c63e99f15ea5840e8bea22c3d065f2fc36660ca2825ef3e24cceb8a4b4730cd2e2d07bf74f224937f55cb87cdce1e64c7",
+    "strategies": [
+      "jwt"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "type": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    }
+  },
+  "mongodb": "mongodb://localhost:27017/otica"
+}
